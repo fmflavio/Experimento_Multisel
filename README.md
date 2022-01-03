@@ -1,4 +1,4 @@
-## Bem vindo ao experimento MultiSel para AMUSE VR para Oculus Quest 2
+## Bem vindo ao experimento MultiSel para AMUSE VR do Oculus Quest 2
 
 Olá, sou o Flávio Miranda de Farias, candidato a Doutorado pela UFF e preciso de sua colaboração para minha pesquisa.
 
@@ -9,7 +9,7 @@ Atualmente a pesquisa encontra-se em seu segundo experimento, onde o primeiro te
 Este experimento será executado totalmente de forma remota e caso aceite participar clique [aqui](https://fmflavio.github.io/experimento_multisel/page1.html) para continuar.
 
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 You can use the [editor on GitHub](https://github.com/fmflavio/experimento_multisel/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
