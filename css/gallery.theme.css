@@ -22,6 +22,7 @@
   bottom: 0;
   width: 100%;
   text-align: center;
+  color: black;
 }
 .gallery .control-button {
   display: inline-block;
@@ -30,4 +31,5 @@
   text-align: center;
   text-decoration: none;
   transition: color .1s;
+  color: black;
 }
