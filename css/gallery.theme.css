@@ -15,14 +15,14 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-
+  color:black;
 }
 .gallery .control-button {
   display: inline-block;
-  margin: 0 .02em;
+  margin: 0.02em;
   font-size: 3em;
   text-align: center;
   text-decoration: none;
   transition: color .1s;
-
+  color:black;
 }
