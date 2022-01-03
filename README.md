@@ -6,10 +6,11 @@ A minha autoria entitula-se: Autoria Imersiva em Realidade Virtual para Aplicaç
 
 Atualmente a pesquisa encontra-se em seu segundo experimento, onde o primeiro teve foco na usabilidade da proposta, já neste segundo experimento, buscamos avaliar a proposta de utilizar a linguagem MultiSel como ferramenta de importação e exportação de projetos.
 
-Este experimento será executado totalmente de forma remota e caso aceite participar clique [aqui](https://fmflavio.github.io/experimento_multisel/page1.html) para continuar.
+Este experimento será executado totalmente de forma remota e caso aceite participar clique [aqui](https://fmflavio.github.io/experimento_multisel/slide.html) para continuar.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 You can use the [editor on GitHub](https://github.com/fmflavio/experimento_multisel/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
