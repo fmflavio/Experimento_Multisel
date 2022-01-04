@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<multisel id="Project-1" title="MultiSEL for AMUSE VR" xmlns="DefaultProfile">
+  <head>
+    ...
+  </head>
+  <body primaryComponent="scene 1">
+    <scene id="scene 1">
+      ...
+    </scene>
+    <scene id="scene 2">
+      ...
+    </scene>
+  </body>
+</multisel>
+
