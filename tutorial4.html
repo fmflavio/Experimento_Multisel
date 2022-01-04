@@ -23,32 +23,9 @@
         </br>
         <img src="image/ms_cenas.JPG">
         </br>
-        <p>As tags media e effect são usadas para representar mídias e efeitos sensoriais respectivivamente.</p>
-        <p>Tanto as mídias quando os ES, possuem atributos id como identificador unico e type para definir o seu tipo, as mídias também possuem o src que define o endereço do arquivo.</p>
-        <p>As mídias podem ser dos tipos:</p>
-        <ul>
-            <li>video -  para vídeo</li>
-            <li>image -  para imagens e fotos</li>
-            <li>audio -  para áudios</li>
-            <li>text -  para mensagens de texto</li>
-            <li>ico -  para botões interativos</li>
-        </ul>
-        <p>Os Efeitos Sensoriais podem ser dos tipos:</p>
-        <ul>
-            <li>LightType -  para efeito de luz</li>
-            <li>SteamType -  para efeito de vapor</li>
-            <li>WindType -  para efeito de vento</li>
-        </ul>
-        <p>As tags property, são usadas para definir as caracteristicas da mídia ou efeito sensorial.</p>
-        <p>Todas as tags property possuem atributos name que define o nome da caracteristica e a tag value que define o conteúdo.</p>
-        <p>As mídias do tipo vídeo e imagem podem ser aprentadas de diversas formas quando apresentada ou não uma property diferenciadora, a seguir os tipo apresentação possiveis dessas mídias:</p>
-        <ul>
-            <li>Vídeo em 360° -  para exibir o vídeo ao fundo em 360°, basta acrescentar a tag <property name="background" value="true" />, como na linha 3</li>
-            <li>Vídeo em Picture in Picture -  para exibir o vídeo em PIP, basta acrescentar a tag <property name="pip" value="true" /></li>
-            <li>Imagem em 360° -  para exibir a imagem em 360°, basta acrescentar a tag <property name="background" value="true" /></li>
-        </ul>
-        <p>Para todos os outros casos de mídia e ES, deve-se omitir as tags citadas e descrever a posição no cenário 3D com os valores x, y e z, como nas linhas 10, 11 e 12</p>
-        <p>Todas as outras tags exibidas no exemplo são opicionais, porem recomendadas</p>
+        <p>As cenas do projetos são ambientes tridimensionais onde as mídias serão apresentadas, as cenas são independentes umas das outras e servem como um ambiente organizacional e temporal da apresentação.</p>
+        <p>Para uma cena ser iniciada, é necessário aponta-la no projeto através do atributo primaryComponent da tag body, como na linha 1.</p>
+        <p>As cenas também possuem atributo obrigatório como o id para identifica-la e opicional o primaryComponent para apontar qual mídia será iniciada primeiramente.</p>
         </br>
     </div>
 </body>
