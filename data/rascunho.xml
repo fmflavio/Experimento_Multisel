@@ -1,15 +1,18 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<multisel id="Project-1" title="MultiSEL for AMUSE VR" xmlns="DefaultProfile">
-  <head>
-    ...
-  </head>
-  <body primaryComponent="scene 1">
-    <scene id="scene 1">
-      ...
-    </scene>
-    <scene id="scene 2">
-      ...
-    </scene>
-  </body>
-</multisel>
-
+﻿<body primaryComponent="scene 1">
+	<scene id="scene 1" primaryComponent="image360_s1">
+		<!--Mídias e Efeitos Sensoriais desta cena-->
+		<media id="image360_s1" src="Copacabana360.png" type="image">
+			<property name="duration" value="300" />
+			<property name="background" value="true" />
+			<property name="loop" value="false" />
+		</media>
+	</scene>
+	<scene id="scene 2" primaryComponent="image360_s2">
+		<!--Mídias e Efeitos Sensoriais desta cena-->
+		<media id="image360_s2" src="Cristo360.png" type="image">
+			<property name="duration" value="300" />
+			<property name="background" value="true" />
+			<property name="loop" value="false" />
+		</media>
+	</scene>
+</body>
