@@ -1,7 +1,8 @@
 const htmlEditor = CodeMirror(document.querySelector(".editor .code .html-code"),{
 	lineNumbers:true,
 	tabSize:4,
-	mode:"xml"
+	mode:"xml",
+	value:"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<multisel id=\"Projeto1\" title=\"MultiSEL para AMUSE VR\" xmlns=\"DefaultProfile\">\n\t<head>\n\t\t<meta name=\"author\" value=\"seu nome\" />\n\t\t<meta name=\"year\" value=\"2022\" />\n\t</head>\n\t<body primaryComponent=\"scene 1\">\n\t\t<scene id=\"scene 1\">\n\t\t\t<!--Seus codigo aqui-->\n\t\t</scene>\n\t</body>\n</multisel>"
 });
 const cssEditor = CodeMirror(document.querySelector(".editor .code .css-code"),{
 	lineNumbers:true,
@@ -22,3 +23,4 @@ document.querySelector("#run-btn").addEventListener("click",function(){
 	previewWindow.write(htmlCode+csslCode+jsCode);
 	previewWindow.close();
 });
+
