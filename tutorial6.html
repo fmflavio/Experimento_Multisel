@@ -6,6 +6,18 @@
     <link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css">
     <script type="text/javascript" src="https://codemirror.net/lib/codemirror.js"></script>
     <script type="text/javascript" src="https://codemirror.net/mode/xml/xml.js"></script>
+    <script>
+        function myFunction() {
+          var copyText = document.getElementById("myInput");
+
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+          navigator.clipboard.writeText(copyText.value);
+
+          alert("Copied the text: " + copyText.value);
+        }
+    </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/menuestilo.css">
@@ -37,10 +49,12 @@
         <h2>Editor</h2>
         <div class="editor">
             <div class="code">
-                <div class="html-code"></div>
+                <div id="myInput" class="html-code" ></div>
             </div>
         </div>
         <script type="text/javascript" src="js/code.js"></script>
+
+        <button onclick="myFunction()">Copiar texto</button>
 
         <h2>Exemplo</h2>
         <textarea readonly rows='80' cols='80'>

@@ -23,4 +23,3 @@ document.querySelector("#run-btn").addEventListener("click",function(){
 	previewWindow.write(htmlCode+csslCode+jsCode);
 	previewWindow.close();
 });
-
