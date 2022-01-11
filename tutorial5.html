@@ -15,18 +15,14 @@
       <a href="tutorial2.html">Escopo</a>
       <a href="tutorial3.html">Mídias e Efeitos Sensoriais</a>
       <a href="tutorial4.html">Cena</a>
-      <a href="tutorial5.html">Relacionamentos e Portas</a>
-      <a href="tutorial6.html">Atividade</a>
-      <a href="tutorial7.html">Formulários</a>
+      <a href="tutorial5.html">Relacionamentos</a>
+      <a href="tutorial6.html">Portas</a>
     </div>
     <div>
-        <h1>Tutorial - Relacionamentos e Portas em um projeto MultiSel</h1>
+        <h1>Tutorial - Relacionamentos em um projeto MultiSel</h1>
         </br>
-        <p>MultiSel é baseado em outras linguagens como NCL e SMIL, portanto importando algumas tecnicas, destas tecnicas para o AMUSE VR citamos:</p>
-        <ul>
-            <li>Relacionamento - responsável por realizar interações ou ações entre mídias ou cenas.</li>
-            <li>Portas - responsável por disponibilizar uma porta/interface de interação ou entrada entre objetos ou cena</li>
-        </ul>
+        <p>Os Relacionamentos - no AMUSE VR, são responsáveis por disponibilizar uma interação entre mídia e cena ou outra mídia/ES,
+        além disso, controlam também o início de encerramento da exibição de mídias/ES ou cena vinculadas a outras mídias/ES ou cena.</p>
         <p>A imagem a baixo mostra um exemplo de uma cena com este conteúdo.</p>
         </br>
         <img src="image/ms_cena2.JPG">
@@ -57,7 +53,7 @@
         <h3>Relacionamentos externos às cenas</h3>
         <p>A imagem a baixo mostra nas linhas 71 a 78, relacionamentos externos às cenas.</p>
         </br>
-        <img src="image/ms_rel_externo.JPG">
+        <img width="50%" height="50%" src="image/ms_rel_externo.JPG">
         </br>
         <p>Nos projetos em MultiSel par o AMUSE VR, comandos interativos como cliques em imagens, textos e botões,
         com objetivo de transitar entre cenas, é necessário que o relacionamento que fique localizado fora das cenas,
@@ -74,22 +70,6 @@
             <li>primary com o atributo interface - indica a porta de acesso da mídia da cena, como visto nas linhas de 72 e 76.</li>
             <li>secondary - apontar a cena a ser iniciada após a ação, como visto nas linhas de 73 e 77.</li>
         </ul>
-        </br>
-
-        <h2>Portas</h2>
-        <p>A imagem a baixo mostra na linha 41, um exemplo porta.</p>
-        </br>
-        <img src="image/ms_porta.JPG">
-        </br>
-        <p>As portas no AMUSE VR têm como objetivo, prover acesso a ações que levem de uma cena a outra.</p>
-        <p>No AMUSE VR, todo relacionamento externo à cena, necessita de uma porta para prover acesso ao conteúdo da cena.</p>
-        <p>Todas as portas devem ser criadas internamente as cenas que forneçam acesso a uma de suas mídias.</p>
-        <p>Para criar uma porta é necessário criar a tag port, com um atributo id único e o atributo component, que representa a mídia alvo da porta.</p>
-        </br>
-        <h3>Atenção</h3>
-        <p>Ao criar um comando interativo de clique em alguma mídia, é necessário,
-        criar uma porta na cena que contenha a mídia originária a mesma mídia que terá a ação responsiva, além disso, é necessário criar um relacionamento externo às cenas,
-        como visto anteriormente.</p>
         </br>
     </div>
 </body>

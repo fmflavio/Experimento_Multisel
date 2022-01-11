@@ -14,6 +14,11 @@ const jsEditor = CodeMirror(document.querySelector(".editor .code .js-code"),{
 	tabSize:4,
 	mode:"javascript"
 });
+const xmlEditor = CodeMirror(document.querySelector(".exemplo"),{
+	lineNumbers:true,
+	tabSize:4,
+	mode:"xml"
+});
 document.querySelector("#run-btn").addEventListener("click",function(){
 	let htmlCode = htmlEditor.getValue();
 	let csslCode = "<style>" + cssEditor.getValue() + "</style>";

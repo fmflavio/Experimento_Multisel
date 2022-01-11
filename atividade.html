@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>MultiSel para AMUSE VR</title>
+    <link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css">
+    <script type="text/javascript" src="https://codemirror.net/lib/codemirror.js"></script>
+    <script type="text/javascript" src="https://codemirror.net/mode/xml/xml.js"></script>
+    <script>
+        function myFunction() {
+          var copyText = document.getElementById("myInput");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); /* For mobile devices */
+          navigator.clipboard.writeText(copyText.value);
+          alert("Copied the text: " + copyText.value);
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/menuestilo.css">
+</head>
+<body>
+    <div style="padding:16px">
+      <h1>Atividade - projeto MultiSel para o AMUSE VR</h1>
+    </div>
+    <div>
+        <p>Usando o conteúdo ensinado, crie um projeto MultiSel para o AMUSE VR, para isso, 
+        será disponibilizado um código rascunho a baixo para conferencia.</p>
+        <p>O tema da apresentação será "Crie uma apresentação interativa mulsemídia 360°, com a temática de propaganda
+        turística sobre a cidade do Rio de Janeiro".</p>
+        <p>Para a criação dessa apresentação, segue a lista mínima de tarefas a serem realizadas no projeto MultiSel:</p>
+        <ul>
+            <li>crie um vídeo ou imagem 360° na primeira cena;</li>
+            <li>crie um vídeo ou imagem 360° na segunda cena;</li>
+            <li>crie na primeira cena uma imagem ou vídeo 2D;</li>
+            <li>relacione o início da imagem ou vídeo 2D com o vídeo ou imagem em 360°, na primeira cena;</li>
+            <li>torne interativo o vídeo ou imagem 2D para iniciar a cena 2;</li>
+            <li>na cena 2, crie algum efeito sensorial; e</li>
+            <li>salve a apresentação e envie para o endereço de e-mail informado nesta página.</li>
+        </ul>
+        <p>Os dados utilizados em seu projeto como nome de arquivo, devem ser todos fictícios.</p>
+        <p>Peço que anote o tempo de total, que levará para criar o código MultiSel.</p>
+        <p>Para criação do código, pode ser usado o editor de texto fornecido a seguir (já com rascunho inicial) ou algum de sua preferência.</p>
+        <p>O código deve ser enviado em arquivo nos formatos xml, txt ou doc, para o e-mail: <a href="mailto:flavio.farias@midiacom.uff.br" target="_blank">flavio.farias@midiacom.uff.br</a>,
+        no email use o título "experimento" e no corpo informar o seu nome e duração da atividade.</p>
+        </br>
+        
+        <h2>Editor</h2>
+        <div class="editor">
+            <div class="code">
+                <div id="myInput" class="html-code" ></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/code.js"></script>
+
+        <button onclick="myFunction()">Copiar texto</button>
+
+        <h2>Exemplo</h2>
+        <textarea class="exemplo" readonly rows='82' cols='82'>
+<?xml version="1.0" encoding="UTF-8"?>
+<multisel id="Projeto1" title="MultiSEL para AMUSE VR" xmlns="DefaultProfile">
+    <head>
+    <meta name="author" value="seu nome" />
+    <meta name="year" value="2022" />
+    </head>
+    <body primaryComponent="scene 1">
+    <scene id="scene 1" primaryComponent="image360_s1">
+        <!--Portas desta cena-->
+        <port id="portChangeScene-0" component="image2d-1_s1" />
+        <!--Mídias e Efeitos Sensoriais desta cena-->
+        <media id="image360_s1" src="Copacabana360.png" type="image">
+        <property name="duration" value="300" />
+        <property name="background" value="true" />
+        <property name="loop" value="false" />
+        </media>
+        <media id="image2d-1_s1" src="Copacabana360.png" type="image">
+        <property name="duration" value="300" />
+        <property name="x" value="0" />
+        <property name="y" value="0" />
+        <property name="z" value="5" />
+        <property name="loop" value="false" />
+        <property name="scale" value="1" />
+        </media>
+        <!--Relações desta cena-->
+        <relation id="Relation-1" type="finishes">
+        <primary component="scene 1" />
+        <secondary component="image360_s1" />
+        </relation>
+        <relation id="Relation-2" type="starts">
+        <primary component="scene 1" />
+        <secondary component="image2d-1_s1" />
+        </relation>
+        <relation id="Relation-3" type="finishes">
+        <primary component="scene 1" />
+        <secondary component="image2d-1_s1" />
+        </relation>
+    </scene>
+    <scene id="scene 2" primaryComponent="image360_s2">
+        <!--Portas desta cena-->
+        <port id="portChangeScene-1" component="image2d-1_s2" />
+        <!--Mídias e Efeitos Sensoriais desta cena-->
+        <media id="image360_s2" src="Cristo360.png" type="image">
+        <property name="duration" value="300" />
+        <property name="background" value="true" />
+        <property name="loop" value="false" />
+        </media>
+        <media id="image2d-1_s2" src="Carnaval2D.jpg" type="image">
+        <property name="duration" value="300" />
+        <property name="x" value="0" />
+        <property name="y" value="0" />
+        <property name="z" value="5" />
+        <property name="loop" value="false" />
+        <property name="scale" value="1" />
+        </media>
+        <!--Relações desta cena-->
+        <relation id="Relation-6" type="finishes">
+        <primary component="scene 2" />
+        <secondary component="image360_s2" />
+        </relation>
+        <relation id="Relation-7" type="starts">
+        <primary component="scene 2" />
+        <secondary component="image2d-1_s2" />
+        </relation>
+        <relation id="Relation-8" type="finishes">
+        <primary component="scene 2" />
+        <secondary component="image2d-1_s2" />
+        </relation>
+    </scene>
+    <!--Relacionamentos entre cenas-->
+    <relation id="Relation-4" type="onSelectionStarts" keyCode="trigger">
+        <primary component="scene 1" interface="portChangeScene-0" />
+        <secondary component="scene 2" />
+    </relation>
+    <relation id="Relation-9" type="onSelectionStarts" keyCode="trigger">
+        <primary component="scene 2" interface="portChangeScene-1" />
+        <secondary component="scene 1" />
+    </relation>
+    </body>
+</multisel>
+        </textarea>
+
+    </div>
+</body>
+</html>

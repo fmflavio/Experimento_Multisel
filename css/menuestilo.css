@@ -33,3 +33,7 @@ body {
     height: auto;
   }
 }
+
+.editor .code .html-code {
+  font-size: 18px;
+}
