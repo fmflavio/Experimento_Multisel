@@ -28,3 +28,7 @@ document.querySelector("#run-btn").addEventListener("click",function(){
 	previewWindow.write(htmlCode+csslCode+jsCode);
 	previewWindow.close();
 });
+function copyToClipBoard() {
+	navigator.clipboard.writeText(htmlEditor.getValue());
+	alert("Código copiado para área de transferência, aperte CTL+V em sua mensagem de e-mail para inseri-lo.");
+}
