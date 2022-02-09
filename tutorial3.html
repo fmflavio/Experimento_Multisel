@@ -8,7 +8,7 @@
 </head>
 <body>
     <div style="padding:16px">
-      <h1>Tutorial MultiSel para o AMUSE VR</h1>
+      <h1>Tutorial MultiSEL para o AMUSE VR</h1>
     </div>
     <div class="navbar">
       <a href="tutorial1.html">Introdução</a>
@@ -19,39 +19,47 @@
       <a href="tutorial6.html">Portas</a>
     </div>
     <div>
-        <h1>Tutorial - Mídias e Efeitos Sensoriais (ES) em um projeto MultiSel</h1>
+        <h1>Tutorial - Mídias e Efeitos Sensoriais (ES) em um projeto MultiSEL</h1>
         </br>
-        <p>A imagem a baixo mostra exemplos de descrever mídias e ES.</p>
+        <p>A imagem a baixo mostra exemplos de como se escreve a mídias e ES.</p>
         </br>
         <img src="image/ms_midias.JPG">
         </br>
-        <p>As tags media e effect são usadas para representar mídias e efeitos sensoriais respectivamente.</p>
-        <p>Tanto as mídias quando os ES, possuem atributos id como identificador único e type para definir o seu tipo, as mídias também possuem o atributo src que define o endereço do arquivo.</p>
+        <p>As <i>tags media</i> e <i>effect</i>  são usadas para representar mídias e efeitos sensoriais (ES) respectivamente.</p>
+        <p>Tanto as mídias quando os ES, possuem atributos id como identificador único e <i>type</i>(tipo) para
+        definir o tipo de mídia, as mídias também possuem o atributo src que define o endereço do arquivo.</p>
         <p>As mídias podem ser dos tipos:</p>
         <ul>
-            <li>video -  para vídeo</li>
-            <li>image -  para imagens e fotos</li>
-            <li>audio -  para áudios</li>
-            <li>text -  para mensagens de texto</li>
-            <li>ico -  para botões interativos</li>
+            <li>video -  para vídeo;</li>
+            <li>image -  para imagens e fotos;</li>
+            <li>audio -  para áudios;</li>
+            <li>text -  para mensagens de texto; e</li>
+            <li>ico -  para botões interativos.</li>
         </ul>
         <p>Os Efeitos Sensoriais podem ser dos tipos:</p>
         <ul>
-            <li>LightType -  para efeito de luz</li>
-            <li>SteamType -  para efeito de vapor</li>
-            <li>WindType -  para efeito de vento</li>
+            <li>WindType -  para efeito de vento;</li>
+            <li>HeatType -  para efeito de calor;</li>
+            <li>ScentType -  para efeito de odores;</li>
+            <li>LightType -  para efeito de luz; e</li>
+            <li>SteamType -  para efeito de vapor.</li>
         </ul>
-        <p>As tags property, são usadas para definir as características da mídia ou efeito sensorial.</p>
-        <p>Todas as tags property possuem atributos name que define o nome da características e a tag value que define o conteúdo.</p>
-        <p>As mídias do tipo vídeo e imagem podem ser apresentadas de diversas formas quando apresentada ou não uma property diferenciadora,
-        a seguir os tipos apresentações possíveis dessas mídias:</p>
+        <p>As <i>tags property</i>, são usadas para definir as características da mídia ou efeito sensorial.</p>
+        <p>Todas as <i>tags property</i> possuem atributos <i>name</i> que define o nome das propriedades
+        e a <i>tag value</i> que define o conteúdo.</p>
+        <p>As mídias do tipo vídeo e imagem podem ser apresentadas de diversas formas. Para diferenciar a apresentação,
+        existe uma <i>tags property</i> própria para essa finalidade. A seguir os tipos apresentações possíveis
+        dessas mídias:</p>
         <ul>
-            <li>Vídeo em 360° -  para exibir o vídeo ao fundo em 360°, basta acrescentar a tag <property name="background" value="true" />, como na linha 3</li>
-            <li>Vídeo em Picture in Picture -  para exibir o vídeo em PIP, basta acrescentar a tag <property name="pip" value="true" /></li>
-            <li>Imagem em 360° -  para exibir a imagem em 360°, basta acrescentar a tag <property name="background" value="true" /></li>
+            <li>Vídeo em 360° - para exibir o vídeo ao fundo em 360°, basta acrescentar a <i>tag property </i>,
+            como na linha 3.</li>
+            <li>Vídeo em <i>Picture in Picture (PIP)</i> - para exibir o vídeo em PIP, basta acrescentar
+            a <i>tag property </i> com o atributo name=”pip” e value=”true”.</li>
+            <li>Imagem em 360° - para exibir a imagem em 360°, basta acrescentar a <i>tag property </i>, como na linha 3.</li>
         </ul>
-        <p>Para todos os outros casos de mídia e ES, deve-se omitir as tags citadas e descrever a posição no cenário 3D com os valores x, y e z, como nas linhas 10, 11 e 12</p>
-        <p>Todas as outras tags exibidas no exemplo são opcionais, porem recomendadas</p>
+        <p>Para todos os outros casos de mídia e ES, deve-se omitir as <i>tags</i> citadas e descrever a posição
+        no cenário 3D com os valores x, y e z em valores reais, como nas linhas 10, 11 e 12 do exemplo.
+        As demais tags exibidas nos exemplos como <i>duration, volume e loop</i> são opcionais, porem recomendadas.</p>
         </br>
     </div>
 </body>

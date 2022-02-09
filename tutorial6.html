@@ -2,13 +2,13 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>MultiSel para AMUSE VR</title>
+    <title>MultiSEL para AMUSE VR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/menuestilo.css">
 </head>
 <body>
     <div style="padding:16px">
-      <h1>Tutorial MultiSel para o AMUSE VR</h1>
+      <h1>Tutorial MultiSEL para o AMUSE VR</h1>
     </div>
     <div class="navbar">
       <a href="tutorial1.html">Introdução</a>
@@ -19,9 +19,9 @@
       <a href="tutorial6.html">Portas</a>
     </div>
     <div>
-        <h1>Tutorial - Portas em um projeto MultiSel</h1>
+        <h1>Tutorial - Portas em um projeto MultiSEL</h1>
         </br>
-        <p>As Portas são responsáveis por disponibilizar uma porta/interface de interação ou entrada entre objetos ou cena</p>
+        <p>As Portas são responsáveis por disponibilizar uma interface/porta de/para interação ou entrada entre mídias e cena.</p>
         <p>A imagem a baixo mostra um exemplo de uma cena com este conteúdo.</p>
         </br>
         <img src="image/ms_cena2.JPG">
@@ -33,13 +33,14 @@
         </br>
         <p>As portas no AMUSE VR têm como objetivo, prover acesso a ações que levem de uma cena a outra.</p>
         <p>No AMUSE VR, todo relacionamento externo à cena, necessita de uma porta para prover acesso ao conteúdo da cena.</p>
-        <p>Todas as portas devem ser criadas internamente as cenas que forneçam acesso a uma de suas mídias.</p>
-        <p>Para criar uma porta é necessário criar a tag port, com um atributo id único e o atributo component, que representa a mídia alvo da porta.</p>
+        <p>Todas as portas devem ser criadas internamente nas cenas que contenham a mídia acionadora da invocação de outra cena.</p>
+        <p>Para criar uma porta é necessário criar a <i>tag port</i>, com um atributo identificador único “id”
+        e o atributo <i>component</i>, que representa a mídia acionadora da porta.</p>
         </br>
         <h3>Atenção</h3>
-        <p>Ao criar um comando interativo de clique em alguma mídia, é necessário,
-        criar uma porta na cena que contenha a mídia originária a mesma mídia que terá a ação responsiva, além disso, é necessário criar um relacionamento externo às cenas,
-        como visto anteriormente.</p>
+        <p>Ao criar um comando interativo de clique em alguma mídia, é necessário, criar uma porta na cena que
+        contenha a mídia originária a mesma mídia que executará a ação responsiva, além disso, é necessário
+        criar um relacionamento externo entre às cenas, como visto anteriormente.</p>
         </br>
     </div>
 </body>

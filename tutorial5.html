@@ -2,13 +2,13 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>MultiSel para AMUSE VR</title>
+    <title>MultiSEL para AMUSE VR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/menuestilo.css">
 </head>
 <body>
     <div style="padding:16px">
-      <h1>Tutorial MultiSel para o AMUSE VR</h1>
+      <h1>Tutorial MultiSEL para o AMUSE VR</h1>
     </div>
     <div class="navbar">
       <a href="tutorial1.html">Introdução</a>
@@ -19,34 +19,36 @@
       <a href="tutorial6.html">Portas</a>
     </div>
     <div>
-        <h1>Tutorial - Relacionamentos em um projeto MultiSel</h1>
+        <h1>Tutorial - Relacionamentos em um projeto MultiSEL</h1>
         </br>
-        <p>Os Relacionamentos - no AMUSE VR, são responsáveis por disponibilizar uma interação entre mídia e cena ou outra mídia/ES,
-        além disso, controlam também o início de encerramento da exibição de mídias/ES ou cena vinculadas a outras mídias/ES ou cena.</p>
+        <p>Os Relacionamentos - no AMUSE VR, são responsáveis por disponibilizar uma interação entre mídia e cena ou mídia
+        e outra mídia/ES. Além disso, controlam também o início e encerramento da exibição de mídias/ES ou até cena.</p>
         <p>A imagem a baixo mostra um exemplo de uma cena com este conteúdo.</p>
         </br>
         <img src="image/ms_cena2.JPG">
         </br>
         <h2>Relacionamentos</h2>
-        <p>Como dito anteriormente, os relacionamentos tem como objetivo realizar ações entre cenas ou mídias.</p>
-        <p>No MultiSel para o AMUSE VR, ele através da tag relation e deve-se conter as tags filhas primary e secondary</p>
+        <p>Como dito anteriormente, os relacionamentos tem como objetivo realizar ações entre cenas ou mídias/ES.</p>
+        <p>No MultiSEL para o AMUSE VR, as relações são representadas pela <i>tag relation</i>, que deve
+        conter duas as <i>tags</i> filhas, a <i>primary</i> e <i>secondary</i>.</p>
         </br>
 
         <h3>Relacionamentos internos de cada cena</h3>
-        <p>A imagem a baixo mostra nas linhas 57 a 69, relacionamentos internos de uma cena.</p>
+        <p>A imagem a baixo mostra nas linhas 57 a 68, relacionamentos internos de uma cena.</p>
         </br>
         <img src="image/ms_rel_interno.JPG">
         </br>
-        <p>Em cada cena, deve-se conter relacionamentos internamente, que realizem ações como exibir e ocultar mídias e ES:</p>
+        <p>Todas as cenas, devem conter relacionamentos internamente, esses relacionamentos realizarão
+        ações como exibir e ocultar mídias e ES contidas nesta cena, a seguir os tipos de relacionamentos:</p>
         <ul>
-            <li>Exibir uma mídia ou ES - usando o atributo type="starts", como visto na linha de 61.</li>
-            <li>Exibir uma mídia ou ES - usando o atributo type="finishes", como visto na linha de 65.</li>
+            <li>Para exibir uma mídia ou ES na apresentação – usa-se o atributo type="starts", como visto na linha de 61.</li>
+            <li>Para retirar uma mídia ou ES na apresentação - usa-se o atributo type="finishes", como visto na linha de 65.</li>
         </ul>
         </br>
-        <p>Neste tipo de relacionamento as tags filhas apresentam a funções de:</p>
+        <p>Para todos os tipos de relacionamento as <i>tags</i> filhas apresentam a funções de:</p>
         <ul>
-            <li>primary - apontar a origem da mídia ou ES, como visto na linha de 62.</li>
-            <li>secondary - determinar o alvo da mídia ou ES a receber a ação, como visto na linha de 63.</li>
+            <li>primary - através do atributo <i>componente</i>, indica a origem da mídia ou ES que executa a ação, como pode ser visto na linha de 62.</li>
+            <li>secondary - através do atributo <i>componente</i>, indica o alvo da mídia ou ES que sofrerá a ação, como pode ser visto na linha de 63.</li>
         </ul>
         </br>
 
@@ -55,20 +57,26 @@
         </br>
         <img width="50%" height="50%" src="image/ms_rel_externo.JPG">
         </br>
-        <p>Nos projetos em MultiSel par o AMUSE VR, comandos interativos como cliques em imagens, textos e botões,
-        com objetivo de transitar entre cenas, é necessário que o relacionamento que fique localizado fora das cenas,
-        a fim de ter enxergar e ter acesso todas as cenas.</p>
-        <p>Para projetos AMUSE VR, usa-se para as tags relation os atributos:</p>
+        <p>Nos projetos em MultiSEL par o AMUSE VR, comandos interativos como cliques em imagens, textos e botões,
+        com objetivo de transitar entre cenas distintas, é necessário que o relacionamento fique localizado fora das
+        cenas, mas ainda dentro de <i>body</i>, a fim de ter acesso a todas as cenas.</p>
+        <p>Para criar relacionamento interativos entre cenas para projetos AMUSE VR, usa-se as <i>tags relation</i>
+        com os atributos:</p>
         <ul>
-            <li>type="onSelectionStarts" - que determina que iniciará uma cena escolhida ao selecionar uma mídia escolhida, como visto nas linhas de 71 e 75.</li>
-            <li>keyCode="trigger" - determinar que a ação de início será executada por um botão de gatilho, como visto nas linhas de 71 e 75.</li>
+            <li>type="onSelectionStarts" - para iniciar uma determinada cena ao selecionar/interagir com a mídia
+            definida pela interface da sua <i>tag primary</i>, como visto nas linhas de 71 ou 75.</li>
+            <li>keyCode="trigger" - determinar que a ação de início será executada por um botão de gatilho
+            (<i>trigger</i>) do controle, como visto nas linhas de 71 ou 75.</li>
         </ul>
         </br>
-        <p>Neste tipo de relacionamento as tags filhas apresentam a funções de:</p>
+        <p>Para este tipo de relacionamento, as <i>tags</i> filhas apresentam a funções de:</p>
         <ul>
-            <li>primary com o atributo component - apontar a cena de origem da ação, como visto nas linhas de 72 e 76.</li>
-            <li>primary com o atributo interface - indica a porta de acesso da mídia da cena, como visto nas linhas de 72 e 76.</li>
-            <li>secondary - apontar a cena a ser iniciada após a ação, como visto nas linhas de 73 e 77.</li>
+            <li>Atributo <i>component</i> da <i>Tag primary</i> - indica a cena de origem da mídia/ES que executará
+            a ação, como visto nas linhas de 72 e 76.</li>
+            <li>Atributo <i> interface</i> da <i>Tag primary</i> - indica a porta de acesso da cena pela mídia/ES,
+            como visto nas linhas de 72 e 76.</li>
+            <li>Atributo <i>component</i> da <i>Tag secondary</i> - indica a cena a ser iniciada após a ação,
+            como visto nas linhas de 73 e 77</li>
         </ul>
         </br>
     </div>
