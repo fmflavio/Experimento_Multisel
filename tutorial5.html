@@ -44,18 +44,25 @@
         </br>
         <img src="image/ms_rel_interno.JPG">
         </br>
-        <p>Todas as cenas, devem conter relacionamentos internamente, esses relacionamentos realizarão
-        ações como exibir e ocultar mídias e ES contidas nesta cena, a seguir os tipos de relacionamentos:</p>
+        <p>Todas as cenas não vazias devem conter relacionamentos internamente, esses relacionamentos no AMUSE VR realizarão
+        ações como exibir ou ocultar mídias/ES contidas na cena. A seguir os tipos de relacionamentos MultiSEL que podem
+        ser usados no AMUSE VR:</p>
         <ul>
             <li>Para exibir uma mídia ou ES na apresentação – usa-se o atributo type="starts", como visto na linha de 61.</li>
             <li>Para retirar uma mídia ou ES na apresentação - usa-se o atributo type="finishes", como visto na linha de 65.</li>
         </ul>
         </br>
-        <p>Para todos os tipos de relacionamento as <i>tags</i> filhas apresentam a funções de:</p>
+        <p>Como todos relacionamentos representam a interação entre dois objetos, é necessário especificar a mídia invocadora 
+        e a mídia invocada através de <i>tags</i> filhas <i>primary</i> e <i>secondary</i>. Para o AMUSE VR descreve-se
+        como a seguir:</p>
         <ul>
             <li>primary - através do atributo <i>componente</i>, indica a origem da mídia ou ES que executa a ação, como pode ser visto na linha de 62.</li>
             <li>secondary - através do atributo <i>componente</i>, indica o alvo da mídia ou ES que sofrerá a ação, como pode ser visto na linha de 63.</li>
         </ul>
+        <p>Como exemplo, se usarmos o relacionamento das linhas 65 a 68 na apresentação abaixo, a imagem do carnaval
+        deixará de ser exibida na apresentação.</p>
+        </br>
+        <img src="image/exemplo.png">
         </br>
 
         <h3>Relacionamentos externos às cenas</h3>
@@ -63,10 +70,11 @@
         </br>
         <img width="50%" height="50%" src="image/ms_rel_externo.JPG">
         </br>
-        <p>Nos projetos em MultiSEL par o AMUSE VR, comandos interativos como cliques em imagens, textos e botões,
-        com objetivo de transitar entre cenas distintas, é necessário que o relacionamento fique localizado fora das
-        cenas, mas ainda dentro de <i>body</i>, a fim de ter acesso a todas as cenas.</p>
-        <p>Para criar relacionamento interativos entre cenas para projetos AMUSE VR, usa-se as <i>tags relation</i>
+        <p>Em projetos MultiSEL para o AMUSE VR, comandos interativos como cliques em mídias como imagens, textos e botões
+        dependendo do relacionamento, podem resultar em transições de cenas. Para isso, é necessário que o
+        relacionamento fique localizado fora de todas as cenas, mas ainda ainda assim, dentro da <i> tag body</i>,
+        isto é necessário para o relacionamento ter acesso a todas as cenas.</p>
+        <p>Para criar relacionamento interativos entre cenas em projetos para AMUSE VR, usa-se a <i>tag relation</i>
         com os atributos:</p>
         <ul>
             <li>type="onSelectionStarts" - para iniciar uma determinada cena ao selecionar/interagir com a mídia
@@ -75,13 +83,13 @@
             (<i>trigger</i>) do controle, como visto nas linhas de 71 ou 75.</li>
         </ul>
         </br>
-        <p>Para este tipo de relacionamento, as <i>tags</i> filhas apresentam a funções de:</p>
+        <p>Para este tipo de relacionamento as <i>tags</i> filhas devem conter a seguinte estrutura:</p>
         <ul>
-            <li>Atributo <i>component</i> da <i>Tag primary</i> - indica a cena de origem da mídia/ES que executará
+            <li>Atributo <i>component</i> da <i>Tag primary</i> - indica a cena que possuí a mídia/ES que executará
             a ação, como visto nas linhas de 72 e 76.</li>
-            <li>Atributo <i> interface</i> da <i>Tag primary</i> - indica a porta de acesso da cena pela mídia/ES,
+            <li>Atributo <i> interface</i> da <i>Tag primary</i> - indica a porta da mídia/ES na cena desejada,
             como visto nas linhas de 72 e 76.</li>
-            <li>Atributo <i>component</i> da <i>Tag secondary</i> - indica a cena a ser iniciada após a ação,
+            <li>Atributo <i>component</i> da <i>Tag secondary</i> - indica a cena a ser iniciada após a ação de click,
             como visto nas linhas de 73 e 77</li>
         </ul>
         </br>
