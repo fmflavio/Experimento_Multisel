@@ -21,23 +21,27 @@
     <div>
         <h1>Tutorial - Portas em um projeto MultiSEL</h1>
         </br>
-        <p>As portas são responsáveis por disponibilizar uma interface/porta de/para interação ou entrada entre mídias e cena.</p>
+        <p>As portas são responsáveis por disponibilizar uma interface de acesso para outra cena. No AMUSE VR usa-se as
+        portas para a apresentação mudar de uma cena para outra através de uma relacionamento.</p>
         <h2>Portas</h2>
         <p>A imagem abaixo mostra na linha 41, um exemplo porta.</p>
         </br>
         <img src="image/ms_porta.JPG">
         </br>
-        <p>No AMUSE VR, todo relacionamento (<i>tag relation</i>) externo à cena necessita de uma porta para prover acesso ao
+        <p>No AMUSE VR, todo relacionamento (<i>tag relation</i>) externo necessita de uma porta para dar acesso ao
         conteúdo da cena.</p>
-        <p>Todas as portas devem ser criadas internamente nas cenas que contenham a mídia acionadora da invocação
-        de outra cena.</p>
+        <p>Todas as portas devem ser criadas dentro das de cena (<i>tag scene</i>) que contenha a mídia 
+        que chamará a outra cena, como na figura abaixo.</p>
+        </br>
+        <img src="image/digrama_porta.png">
+        </br>
         <p>Para criar uma porta é necessário criar a <i>tag port</i>, com um atributo identificador único “id”
-        e o atributo <i>component</i>, que representa a mídia acionadora da porta.</p>
+        e o atributo <i>component</i>, que representa a mídia que acessa a porta, como na linha 41.</p>
         </br>
         <h3>Atenção</h3>
-        <p>Ao criar um comando interativo de clique em alguma mídia, é necessário, criar uma porta na cena que
-        contenha a mídia originária a mesma mídia que executará a ação responsiva, além disso, é necessário
-        criar um relacionamento externo entre às cenas, como visto anteriormente.</p>
+        <p>Ao criar um comando interativo de clique em alguma mídia, é necessário, criar uma porta dentro da mesma cena que
+        contenha a mídia que responde ao clique. Além disso, é necessário
+        criar um relacionamento externo à cena, como visto anteriormente.</p>
         </br>
     </div>
 </body>
