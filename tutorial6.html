@@ -21,16 +21,21 @@
     <div>
         <h1>Tutorial - Portas em um projeto MultiSEL</h1>
         </br>
-        <p>As portas são responsáveis por disponibilizar uma interface de acesso para outra cena. No AMUSE VR usa-se as
-        portas para a apresentação mudar de uma cena para outra através de uma relacionamento.</p>
+        <p>As portas são responsáveis por disponibilizar uma interface de acesso para uma mídia ou ES dentro de uma cena.
+        No AMUSE VR usa-se as portas para a apresentação mudar de uma cena para outra através de uma relacionamento.</p>
         <h2>Portas</h2>
-        <p>A imagem abaixo mostra na linha 41, um exemplo porta.</p>
+        <p>A imagem abaixo mostra na linha 41 um exemplo porta.</p>
         </br>
         <img src="image/ms_porta.JPG">
         </br>
-        <p>No AMUSE VR, todo relacionamento (<i>tag relation</i>) externo necessita de uma porta para dar acesso ao
+        <p>Neste exemplo a cena 2 possui duas mídias do tipo imagem e uma porta que aponta para uma das imagens componentes,
+        conforme a ilustração abaixo.</p>
+        </br>
+        <img src="image/temp2.JPG">
+        </br>
+        <p>No AMUSE VR, todo relacionamento (<i>tag relation</i>) externo às cenas necessita de uma porta para dar acesso ao
         conteúdo da cena.</p>
-        <p>Todas as portas devem ser criadas dentro das de cena (<i>tag scene</i>) que contenha a mídia 
+        <p>Todas as portas devem ser criadas dentro de uma cena (<i>tag scene</i>) que contenha a mídia 
         que chamará a outra cena, como na figura abaixo.</p>
         </br>
         <img src="image/digrama_porta.png">
