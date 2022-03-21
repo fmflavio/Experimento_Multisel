@@ -28,25 +28,27 @@
         </br>
         <img src="image/ms_porta.JPG">
         </br>
-        <p>Neste exemplo a cena 2 possui duas mídias do tipo imagem e uma porta que aponta para uma das imagens componentes,
+        <p>Neste exemplo, a cena 2 possui duas mídias do tipo imagem e uma porta que aponta para uma das imagens componentes,
         conforme a ilustração abaixo.</p>
         </br>
         <img src="image/temp2.JPG">
         </br>
+        <p>Para criar uma porta é necessário criar a <i>tag port</i>, com um atributo identificador único “id”
+        e o atributo <i>component</i>, que representa a mídia acessada pela porta, como na linha 41.</p>
         <p>No AMUSE VR, todo relacionamento (<i>tag relation</i>) externo às cenas necessita de uma porta para dar acesso ao
-        conteúdo da cena.</p>
-        <p>Todas as portas devem ser criadas dentro de uma cena (<i>tag scene</i>) que contenha a mídia 
-        que chamará a outra cena, como na figura abaixo.</p>
+        conteúdo da cena, como ilustrado na figura abaixo.</p>
         </br>
         <img src="image/digrama_porta.png">
         </br>
-        <p>Para criar uma porta é necessário criar a <i>tag port</i>, com um atributo identificador único “id”
-        e o atributo <i>component</i>, que representa a mídia que acessa a porta, como na linha 41.</p>
+        <p>O relacionamento ilustrado na figura acima é definido conforme o código MultiSEL 
+        a seguir nas linhas 75 a 78, ou seja, quando a mídia imagem indicada pela porta da cena 2 for clicada,
+        a cena 1 será exibida.</p>
+        </br>
+        <img width="50%" height="50%" src="image/ms_rel_externo.JPG">
         </br>
         <h3>Atenção</h3>
-        <p>Ao criar um comando interativo de clique em alguma mídia, é necessário, criar uma porta dentro da mesma cena que
-        contenha a mídia que responde ao clique. Além disso, é necessário
-        criar um relacionamento externo à cena, como visto anteriormente.</p>
+        <p>Para criar relacionamentos entre cenas diferentes, a <i>tag relation</i> deve ser definida dentro
+        do corpo do documento <i>tag body</i>.</p>
         </br>
     </div>
 </body>
