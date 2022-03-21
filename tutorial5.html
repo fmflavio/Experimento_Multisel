@@ -32,10 +32,12 @@
         </br>
         <h2>Relacionamentos</h2>
         <p>Como dito anteriormente, os relacionamentos têm como objetivo realizar ações entre cenas/mídias/ES. Em MultiSEL,
-        os relacionamentos possuem um atributo <i>type</i> conforme os tipos indicados na figura abaixo:</p>
-        </br>
-        <img src="image/tipos_relacao.JPG">
-        </br>
+        os relacionamentos possuem um atributo <i>type</i> conforme os tipos indicados abaixo:</p>
+        <ul>
+            <li>"starts" - quando o componente primário for exibido, o componente secundário será exibido.</li>
+            <li>"finishes" - quando a exibição do componente primário for finalizada,
+            a exibição do componente secundário será finalizada.</li>
+        </ul>
         <p>No MultiSEL para o AMUSE VR, para descrever uma relação, deve-se usar a <i>tag relation</i> (como visto na linha 57).
         Além desta tag, deve conter duas <i>tags</i> filhas, a <i>primary</i> e <i>secondary</i> 
         (como visto nas linhas 58 e 59). Para melhor entendimento, os relacionamentos serão divididos em
