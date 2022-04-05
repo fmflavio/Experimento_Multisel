@@ -48,7 +48,118 @@
         <p>Atualmente o AMUSE VR suporta os efeitos de vento, calor e vibração.</p>
         <p>As <i>tags property</i> são usadas para definir as características da mídia ou efeito sensorial.</p>
         <p>Todas as <i>tags property</i> possuem o atributo <i>name</i>, que define o nome da propriedade,
-        e o atributo <i>value</i>, que define o conteúdo.</p>
+        e o atributo <i>value</i>, que define o conteúdo. A seguir os tipos de propriedades de mídia e efeito sensorial:</p>
+        
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-baqh{text-align:center;vertical-align:top}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+    .tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-baqh"></th>
+    <th class="tg-amwm">name</th>
+    <th class="tg-amwm">value</th>
+    <th class="tg-amwm">Descrição</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-7btt" rowspan="10">Mídia</td>
+    <td class="tg-c3ow">duration</td>
+    <td class="tg-0pky">int</td>
+    <td class="tg-0pky">representa o tempo de apresentação/execução da mídia na cena em segundos</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">background</td>
+    <td class="tg-0pky">bool</td>
+    <td class="tg-0pky">exibir o conteúdo de um vídeo ou imagem no fundo da apresentação, indicados para conteúdos
+    em 360 graus</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">pip</td>
+    <td class="tg-0pky">bool</td>
+    <td class="tg-0pky">exibir o conteúdo de um vídeo ou imagem no em uma janela fixa a frente do campo de visão do usuário,
+    indicados para conteúdos como legendas ou exibição de tradução de libras</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">loop</td>
+    <td class="tg-0pky">bool</td>
+    <td class="tg-0pky">quando ativo, repete a execução da mídia indefinidamente</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">volume</td>
+    <td class="tg-0lax">int</td>
+    <td class="tg-0lax">em uma escala de 0 a 100, controla o volume do áudio ou do vídeo</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">mute</td>
+    <td class="tg-0lax">bool</td>
+    <td class="tg-0lax">quando ativo, torna o áudio ou vídeo mudo</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">text</td>
+    <td class="tg-0lax">string</td>
+    <td class="tg-0lax">representa o texto a ser exibido pela mídia</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">x</td>
+    <td class="tg-0lax">float</td>
+    <td class="tg-0lax">representa a posição no sentido x do plano cartesiano da cena</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">y</td>
+    <td class="tg-0lax">float</td>
+    <td class="tg-0lax">representa a posição no sentido y do plano cartesiano da cena</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">z</td>
+    <td class="tg-0lax">float</td>
+    <td class="tg-0lax">representa a posição no sentido z do plano cartesiano da cena</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm" rowspan="6">Efeito Sensorial</td>
+    <td class="tg-baqh">duration</td>
+    <td class="tg-0lax">int</td>
+    <td class="tg-0lax">representa o tempo de execução do efeito sensorial na cena em segundos</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">loop</td>
+    <td class="tg-0lax">bool</td>
+    <td class="tg-0lax">quando ativo, repete a execução da mídia indefinidamente</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">intensity</td>
+    <td class="tg-0lax">int</td>
+    <td class="tg-0lax">em uma escala de 0 a 100, controla a intensidade da emissão ou trabalho do atuador do efeito sensorial</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">x</td>
+    <td class="tg-0lax">float</td>
+    <td class="tg-0lax">representa a posição no sentido x do plano cartesiano da cena</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">y</td>
+    <td class="tg-0lax">float</td>
+    <td class="tg-0lax">representa a posição no sentido y do plano cartesiano da cena</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">z</td>
+    <td class="tg-0lax">float</td>
+    <td class="tg-0lax">representa a posição no sentido z do plano cartesiano da cena</td>
+  </tr>
+</tbody>
+</table>
+
         <p>As mídias do tipo vídeo e imagem podem ser apresentadas de diversas formas. Para diferenciar a apresentação,
         existe uma <i>tag property</i> própria para essa finalidade. A seguir os tipos de apresentações possíveis
         dessas mídias:</p>
@@ -58,10 +169,16 @@
             <li>Vídeo em <i>Picture in Picture (PIP)</i> - para exibir o vídeo em PIP, basta acrescentar
             a <i>tag property </i> com o atributo name=”pip” e value=”true”.</li>
         </ul>
+        <p>Como limitação da cena, é possivel somente usar uma <i>tag property</i> com o atributo name=”background”
+        e value=”true” por cena, além disso, não é permitido o atributo name=”background” e o atributo name=”pip” para
+        a mesma mídia. Mídias com propriedade ”background” ou ”pip”, não devem ser interativas para evitar conflitos.</p>
         <p>Para todos os outros casos de mídia e ES, deve-se omitir as <i>tags</i> citadas e descrever a posição
         no cenário 3D com os valores x, y e z em valores reais, como nas linhas 10, 11 e 12 do exemplo.
         As demais propriedades exibidas nos exemplos com name igual a <i>duration, volume</i> e <i>loop</i>
         são opcionais, porém recomendadas.</p>
+        <p>Todas as mídias ou efeitos sensoriais inclusos na cena, terão suas faces ajustadas automaticamente para
+        melhor visualização do usuário, não precisando se preocupar com rotação ou até mesmo distribuição espacial
+        de efeitos sensoriais e áudios.</p>
         </br>
         <h2>Sistema de coordenada 3D</h2>
         </br>
