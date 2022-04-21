@@ -39,6 +39,13 @@ iframe {
     padding: 5px;
 }
 
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
 .navbar {
   overflow: hidden;
   background-color: #333;
