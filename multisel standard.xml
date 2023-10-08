@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<multisel id="Project-1" title="MultiSEL for AMUSE VR" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MultiSEL_Schema_to_AMUSEVR.xsd">
+	<head>
+		<meta name="author" value="Flávio Miranda de Farias" />
+		<meta name="year" value="2022" />
+	</head>
+	<body primaryComponent="scene 1">
+		<!-- Cena 1 principal -->
+		<scene id="scene 1" primaryComponent="video3d-1_s1">
+			<!-- Porta da cena -->
+			<port id="portChangeScene1" component="image2d_s1" />
+			<!-- Midia e ES -->
+			<media id="video3d-1_s1" src="paodeacucar360.mp4" type="video">
+				<property name="background" value="true" />
+				<property name="loop" value="true" />
+				<property name="volume" value="0.5" />
+			</media>
+			<!-- Imagem a 1m de distancia com atrase de 1s -->
+			<media id="image2d_s1" src="cristo2d.jpg" type="image">
+				<property name="x" value="0" />
+				<property name="y" value="0" />
+				<property name="z" value="1" />
+				<property name="loop" value="true" />
+			</media>
+			<!-- Relacao interna a cena -->
+			<!-- Atraso da imagem -->
+			<relation id="Relation-s1-1" type="starts" delay="1">
+				<primary component="scene 1" />
+				<secondary component="image2d_s1" />
+			</relation>
+		</scene>
+		<!-- Cena 2 -->
+		<scene id="scene 2">
+			<media id="video3d-1_s2" src="cristo360.mp4" type="video">
+				<property name="background" value="true" />
+				<property name="loop" value="true" />
+				<property name="volume" value="0.3" />
+			</media>
+			<!-- ES de vento com duracao de 3s iniciado junto com a cena-->
+			<effect id="sewind_s2" type="WindType">
+				<property name="duration" value="3" />
+				<property name="x" value="0" />
+				<property name="y" value="1.7" />
+				<property name="z" value="0.5" />
+				<property name="intensity" value="0.7" />
+			</effect>
+		</scene>
+		<!-- Relacionamentos entre cenas -->
+		<relation id="Relation-1" type="onSelectionStarts" keyCode="trigger">
+			<primary component="scene 1" interface="portChangeScene1" />
+			<secondary component="scene 2" />
+		</relation>
+	</body>
+</multisel>
